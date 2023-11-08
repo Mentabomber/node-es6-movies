@@ -117,3 +117,13 @@ let show3 = new TvSeries("Better Call Saul", 2015, "drama", 9, "tv", 6)
 console.log(show1.toString());
 console.log(show2.toString());
 console.log(show3.toString());
+
+const typeShows = moviesAndShows.map(element => {
+    if (element.type === "movie") {
+      return new Movie(element.title, element.year, element.genre, element.rating, element.type);
+    } else if (element.type === "tv") {
+      return new TvSeries(element.title, element.year, element.genre, element.rating, element.type, element.seasons);
+    }
+  });
+
+console.log(typeShows);
