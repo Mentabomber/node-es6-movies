@@ -126,11 +126,11 @@ const typeShows = moviesAndShows.map(element => {
     }
   });
 
-console.log(typeShows[0].type);
+// console.log(typeShows[0].type);
 
 function averageMovieRatingGenre (movieList, genre){
     const movieArray = movieList.filter(movie => (movie.type === "movie" && movie.genre === genre)) 
-    console.log(movieArray);
+    // console.log(movieArray);
     let somma = 0;
     movieArray.forEach(element => { console.log(somma += element.rating);
     });
@@ -140,3 +140,16 @@ function averageMovieRatingGenre (movieList, genre){
 
 const nuovoArray = averageMovieRatingGenre(typeShows, "Fantasy");
 console.log(nuovoArray);
+
+function movieGenreList (movieList) {
+    const movieArray = movieList.filter(movie => (movie.type === "movie"));
+    const genreList = [];
+    movieArray.forEach(movie => {
+        if (!genreList.includes(movie.genre)) {
+            genreList.push(movie.genre)
+        }
+    })
+    return genreList;
+}
+
+console.log(movieGenreList(typeShows));
