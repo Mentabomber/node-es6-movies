@@ -1,0 +1,26 @@
+{
+  "name": "es6-movies",
+  "version": "1.0.0",
+  "description": "Esercizio del 11/08 su js essentials /classi/spread/rest/constructors",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mentabomber/node-es6-movies.git"
+  },
+  "keywords": [
+    "es6-movies"
+  ],
+  "author": "Simcic Tilen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mentabomber/node-es6-movies/issues"
+  },
+  "homepage": "https://github.com/Mentabomber/node-es6-movies#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
