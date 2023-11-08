@@ -152,4 +152,16 @@ function movieGenreList (movieList) {
     return genreList;
 }
 
-console.log(movieGenreList(typeShows));
+// console.log(movieGenreList(typeShows));
+
+//task 8 
+// Creiamo una funzione che filtri i film in base ad un genere passato come argomento e ne ritorni un array con all’interno il risultato della funzione toString() di ogni film.
+function movieByGenreInfos (movieList, genre){
+    const movieArray = movieList.filter(movie => (movie.type === "movie" && movie.genre === genre))
+    const movieInfos = [];
+    movieArray.forEach(movie => { movieInfos.push(movie.toString())
+    });
+    return movieInfos;
+}
+
+console.log(movieByGenreInfos(typeShows, "Drama"));
