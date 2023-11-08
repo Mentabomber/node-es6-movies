@@ -114,9 +114,9 @@ class TvSeries extends Movie {
 const show1 = new Movie(moviesAndShows[0].title,moviesAndShows[0].year,moviesAndShows[0].genre,moviesAndShows[0].rating,moviesAndShows[0].type);
 let show2 = new Movie("titanic","1999","drama","8","movie")
 let show3 = new TvSeries("Better Call Saul", 2015, "drama", 9, "tv", 6)
-console.log(show1.toString());
-console.log(show2.toString());
-console.log(show3.toString());
+// console.log(show1.toString());
+// console.log(show2.toString());
+// console.log(show3.toString());
 
 const typeShows = moviesAndShows.map(element => {
     if (element.type === "movie") {
@@ -126,4 +126,17 @@ const typeShows = moviesAndShows.map(element => {
     }
   });
 
-console.log(typeShows);
+console.log(typeShows[0].type);
+
+function averageMovieRatingGenre (movieList, genre){
+    const movieArray = movieList.filter(movie => (movie.type === "movie" && movie.genre === genre)) 
+    console.log(movieArray);
+    let somma = 0;
+    movieArray.forEach(element => { console.log(somma += element.rating);
+    });
+    let avgRating = somma / movieArray.length;
+    return avgRating;
+}
+
+const nuovoArray = averageMovieRatingGenre(typeShows, "Fantasy");
+console.log(nuovoArray);
