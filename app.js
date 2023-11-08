@@ -79,11 +79,11 @@ const moviesAndShows = [
 ]
 
 class Movie {
-    title;
-    year;
-    genre;
-    rating;
-    type;
+    #title;
+    #year;
+    #genre;
+    #rating;
+    #type;
     constructor (title, year, genre, rating, type) {
         this.title = title;
         this.year = year;
@@ -92,6 +92,38 @@ class Movie {
         this.type = type;
 
     }
+    get title(){
+        return this.#title;
+    }
+    get year(){
+        return this.#year;
+    }
+    get genre(){
+        return this.#genre;
+    }
+    get rating(){
+        return this.#rating;
+    }
+    get type(){
+        return this.#type;
+    }
+    set title(value){
+        this.#title = value;
+    }
+    set year(value){
+        this.#year = value;
+    }
+    set genre(value){
+        this.#genre = value;
+    }
+    set rating(value){
+        this.#rating = value;
+    }
+    set type(value){
+        this.#type = value;
+    }
+    
+
     toString(){
         return `${this.title} è un film di genere ${this.genre}. E' stato rilasciato nel ${this.year} ed ha un voto di ${this.rating}`;
     }
@@ -164,4 +196,7 @@ function movieByGenreInfos (movieList, genre){
     return movieInfos;
 }
 
-console.log(movieByGenreInfos(typeShows, "Drama"));
+// console.log(movieByGenreInfos(typeShows, "Drama"));
+
+//bonus 1
+
